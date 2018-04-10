@@ -1,32 +1,33 @@
 <?php
-
+/*
 //Using metacharacters
 $subject = 'this is a test string containing some text';
 $pattern = '/test|text/';
 preg_match($pattern, $subject, $matches);
-/* echo __LINE__.': ';
-print_r($matches); */
+echo __LINE__.': ';
+print_r($matches);
 
 
 //Using the metacharacter dot(.)
 $subject = 'this is a test string containing some text';
-$pattern = '/test ./';
-/* preg_match($pattern, $subject, $matches);
+$pattern = '/test .+?/';
+preg_match($pattern, $subject, $matches);
 echo __LINE__.': ';
-print_r($matches); */
+print_r($matches);
 //Note: Matches any single character except newline characters.
 //Note: Use sparingly because it can match cases where it should not.
 //Note: the . is considered "greedy"
 
 
+
 //Using ^ and $ position anchor metacharacters
-$subject = trim(' this is a test string containing some text ');
+$subject = trim(' as this is a test string containing some text ');
 $pattern = '/^th/';
-/* preg_match($pattern, $subject, $matches);
+preg_match($pattern, $subject, $matches);
  echo __LINE__.': ';
-print_r($matches); */
+print_r($matches);
 //Note: ^ Matches the position immediately before the start of the string.
-//Note: $ Matches the position immediately after the end of the string.
+//Note: $ Matches the position immediately after the end of the string. If there is a new line it won't work
 //Note: It is a best practice to trim any spaces from the front of the string prior to matching.
 //Note: Match against lines of strings preferable to whole files as these will check each line for a match.
 //Tip: Use file() to get an array indexed at each line then foreach to test each line.
@@ -46,13 +47,13 @@ preg_match($pattern, $subject, $matches);
 //Zero-length matches using position anchor metacharacters
 $subject = trim(' This is a latter 12 tall.  ');
 $pattern = '/\d*/';
-/* preg_match_all($pattern, $subject, $matches);
+preg_match_all($pattern, $subject, $matches);
 echo __LINE__.': ';
-print_r($matches); */
+print_r($matches); 
 //Note: Be careful with this, depending on use, this may or maynot be desired.
 //Note: \Z only matched the position immediatly after the end of the string.
 //Note: These are not supported in all languages.
-
+*/
 
 //Word boundary \b position metacharacter
 $subject = trim(' this is a test string containing some text ');
@@ -125,7 +126,7 @@ print_r($matches); */
 
 //Alternative to the ungreedy ? character
 $subject = trim(' It is a <strong>Great</strong> day today ');
-$pattern = '/<[^>]+>/';
+$pattern = '/<[^>\/]+>/';
 /* preg_match($pattern, $subject, $matches);
 echo __LINE__.': ';
 print_r($matches); */

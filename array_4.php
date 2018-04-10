@@ -9,3 +9,5 @@ $geo = ['country' => 'USA',
 $geo[] = 'North America';
 
 var_dump($geo);
+
+echo $geo["country"];

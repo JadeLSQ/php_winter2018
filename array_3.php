@@ -7,3 +7,5 @@ $array['b'] = 4;
 $array[] = 2;
 
 var_dump($array);
+
+echo $array['b'];

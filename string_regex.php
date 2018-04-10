@@ -13,7 +13,7 @@
  * Multi-byte string functions: http://www.php.net/manual/en/ref.mbstring.php
  *
  */
-
+/*
 $matches = array();
 
 // Find if Bill or William is present in a string.
@@ -32,33 +32,33 @@ foreach ($test_strings as $string) {
 //Simple literal
 $subject = 'this is a test string containing some text';
 $pattern = '/ring/';
-/* preg_match($pattern, $subject, $match);
+preg_match($pattern, $subject, $match);
 echo __LINE__.': ';
-print_r($match); */
+print_r($match);
 
 
 //Using a character class
 $subject = 'over there is a pile of their clothes';
 $pattern = '/the[ir]/';
-/* preg_match_all($pattern, $subject, $matches);
+preg_match_all($pattern, $subject, $matches);
 echo __LINE__.': ';
-print_r($matches); */
+print_r($matches);
 
 
 //Using a character class range
 $subject = 'over there is a pile of their clothes';
 $pattern = '/the[e-i]/';
-/* preg_match_all($pattern, $subject, $matches);
+preg_match_all($pattern, $subject, $matches);
 echo __LINE__.': ';
-print_r($matches); */
+print_r($matches);
 
 
 //Using more than one character class range
 $subject = 'over there is a pile of their clothes';
 $pattern = '/the[e-im-t]/';
-/* preg_match_all($pattern, $subject, $matches);
+preg_match_all($pattern, $subject, $matches);
 echo __LINE__.': ';
-print_r($matches); */
+print_r($matches); /*
 
 
 //Using more than one character class range with a single character
@@ -67,15 +67,16 @@ $subject = 'over there is a pile of their clothes';
 $pattern = '/the[e-i,s,m-r]/';
 /*preg_match_all($pattern, $subject, $matches);
 echo __LINE__.': ';
-print_r($matches); */
+print_r($matches);
+
 
 
 //Using negated character class range
 $subject = 'over there is a pile of their clothes';
 $pattern = '/the[^e-im-r]/';
-/* preg_match($pattern, $subject, $matches);
+preg_match($pattern, $subject, $matches);
 echo __LINE__.': ';
-print_r($matches); */
+print_r($matches);
 //Note: The only special(meta) characters allowed inside a character class are: ],\,^,-
 //Note: All other metacharacters inside a character class are considered literal, no escape requirement
 
@@ -83,9 +84,9 @@ print_r($matches); */
 //Using shorthand character classes
 $subject = 'over there is a pile of their clothes';
 $pattern = '/the\w/';
-/* preg_match_all($pattern, $subject, $matches);
+preg_match_all($pattern, $subject, $matches);
 echo __LINE__.': ';
-print_r($matches); */
+print_r($matches);
 //Note: \w stands for the "word character". Shorthand for [A-Za-z0-9_]
 //Note: \d stands for the "decimal character".  Shorthand for [0-9]
 //Note: \s stands for the "whitespace character". Shorthand for \t\r\n
@@ -95,15 +96,15 @@ print_r($matches); */
 //Use repeating character with word character classes
 $subject = 'over there is a pile of their clothes';
 $pattern = '/the\w+/';
-/* preg_match_all($pattern, $subject, $matches);
+preg_match_all($pattern, $subject, $matches);
 echo __LINE__.': ';
-print_r($matches); */
-
+print_r($matches);
+*/
 
 //Use repeating character + with decimal character classes
 $subject = 'Lots of mountains are over 4773 meters high';
 $pattern = '/[0-9]+/';
-/*preg_match_all($pattern, $subject, $matches);
+preg_match_all($pattern, $subject, $matches);
 echo __LINE__.': ';
-print_r($matches); */
+print_r($matches);
 //Repeating charactors: ?,+,*
