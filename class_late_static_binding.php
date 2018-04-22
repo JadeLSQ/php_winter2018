@@ -26,6 +26,7 @@ class Child extends ParentClass
 	public static function getClassName()
     {
 		echo __CLASS__ . PHP_EOL;
+
 	}
 
 }

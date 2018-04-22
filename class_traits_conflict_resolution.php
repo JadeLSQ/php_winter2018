@@ -50,3 +50,6 @@ class Aliased_Speaker
 	}
 
 }
+
+$speaker = new Speaker();
+var_dump($speaker->bigSpeak());
